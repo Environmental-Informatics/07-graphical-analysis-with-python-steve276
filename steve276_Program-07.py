@@ -33,7 +33,7 @@ depth = data['depth']
 plt.hist(mag, bins=range(0,10), range=[0,10])    # bin size=1/bin edges are 1 unit apart, instead of 1 value per bin 
 plt.xlabel('magnitude')
 plt.ylabel('occurences')
-plt.show()
+#plt.show()
 plt.savefig('mag_hist.png')
 
 
@@ -43,7 +43,7 @@ import seaborn as sns                 # seaborn used to create a tidy plot with 
 sns.kdeplot(mag, kernel='gau', bw='scott', legend=False)   # kernel type: Gaussian, kernel width: Scott's rule
 plt.xlabel('magnitude')    
 plt.ylabel('density')
-plt.show()
+#plt.show()
 plt.savefig('mag_KDE.png')
 
 
@@ -51,7 +51,7 @@ plt.savefig('mag_KDE.png')
 plt.scatter(long, lat, facecolors='none', edgecolors='k')  # lat vs long to follow common map orientation
 plt.xlabel('longitude')    
 plt.ylabel('latitude')
-plt.show()
+#plt.show()
 plt.savefig('lat-long_scatter.png')
 
 
@@ -63,7 +63,7 @@ plt.hist(depth, n_bins, density=True, histtype='step',\
          cumulative=True)
 plt.xlabel('earthquake depth')
 plt.ylabel('likelihood of occurrence')
-plt.show()
+#plt.show()
 plt.savefig('depth_CDF.png')
 
 
@@ -71,7 +71,7 @@ plt.savefig('depth_CDF.png')
 plt.scatter(mag, depth, facecolors='none', edgecolors='k')
 plt.xlabel('magnitude')    
 plt.ylabel('depth')
-plt.show()
+#plt.show()
 plt.savefig('depth-mag_scatter.png')
 
 
@@ -79,7 +79,7 @@ plt.savefig('depth-mag_scatter.png')
 import statsmodels.api as sm
 
 sm.qqplot(mag)                      # assumes normal distribution by default
-plt.show()
+#plt.show()
 plt.savefig('mag_Q-Q.png')
 
 
